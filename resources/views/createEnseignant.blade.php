@@ -24,7 +24,7 @@
 
     <form style = "width:65%;" method="post" action= " {{route('enseignant.create')}}" >
 @csrf
-@method('GET')
+
 
   <div class="mb-3">
     <label for="exampleInputEmail1">Nom de l'enseignant</label>

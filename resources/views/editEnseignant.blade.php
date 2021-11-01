@@ -24,26 +24,26 @@
 
     <form style = "width:65%;" method="POST" action= " {{route('enseignant.update', ['enseignant'=>$enseignant->id])}}" >
 @csrf
-
+@method('PUT')
 
   <div class="mb-3">
     <label for="exampleInputEmail1">Nom </label>
-    <input type="text" class="form-control" name="Nom" values="{{$enseignant->Nom}}" >
+    <input type="text" class="form-control" name="Nom" value="{{$enseignant->Nom}}" >
     
   </div>
   <div class="mb-3">
     <label for="exampleInputEmail1">Prénom </label>
-    <input type="text" class="form-control"name="Prénom" values="{{$enseignant->Prénom}}"  >
+    <input type="text" class="form-control"name="Prénom" value="{{$enseignant->Prénom}}"  >
     
   </div>
   <div class="mb-3">
     <label for="exampleInputEmail1"> Email</label>
-    <input type="text" class="form-control" name="Email" values="{{$enseignant->Email}}"  >
+    <input type="text" class="form-control" name="Email" value="{{$enseignant->Email}}"  >
     
   </div>
   <div class="mb-3">
     <label for="exampleInputPassword1">Téléphone</label>
-    <input type="phoneNumber" class="form-control" name="Téléphone" values="{{$enseignant->Téléphone}}"  >
+    <input type="phoneNumber" class="form-control" name="Téléphone" value="{{$enseignant->Téléphone}}"  >
   </div>
   <div class="mb-3">
     <label for="exampleInputPassword1">Statut</label>
@@ -51,9 +51,9 @@
         <option value = ""></option>
         @foreach($statuts as $statut)
         @if($statut->id == $enseignant->statut_id)
-        <option values = "{{$statut->id}}" selected>{{$statut->id}}</option>
+        <option value = "{{$statut->id}}" selected>{{$statut->libelle}}</option>
         @else
-        <option values = "{{$statut->id}}" >{{$statut->id}}</option>
+        <option values = "{{$statut->id}}" >{{$statut->libelle}}</option>
         @endif
         @endforeach
 </select>

@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Enseignant;
 use Illuminate\Database\Seeder;
-//use Database\Seeders\statutsTableSeeder;
+use Database\Seeders\statutsTableSeeder;
 use Database\Factories\EnseignantFactory;
 
 class DatabaseSeeder extends Seeder
@@ -18,8 +18,8 @@ class DatabaseSeeder extends Seeder
     {
          //\App\Models\User::factory(10)->create();
             
-        Enseignant::factory(35)->create();
+        //Enseignant::factory(35)->create();
 
-        //$this->call(statutsTableSeeder::class);
+        $this->call(StatutsTableSeeder::class);
     }
 }

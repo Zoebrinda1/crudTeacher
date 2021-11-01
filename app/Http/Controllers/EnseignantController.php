@@ -57,7 +57,7 @@ return back()->with("success", "Enseignant ajouté avec succes");
         "statut_id"=>"required"
       ]);
 
-      Enseignant::update($request->all());
+   Enseignant::findOrFail($enseignant)->update($request->all());
 return back()->with("success", "Enseignant mis à jour avec succes");
 
 

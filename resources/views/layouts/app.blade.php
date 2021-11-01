@@ -62,6 +62,9 @@
         <li class="nav-item">
           <a class="nav-link" href="{{ route('enseignant') }}">Enseignants</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ route('matiere') }}">Matières</a>
+        </li>
         
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Settings</a>

@@ -42,7 +42,7 @@
 
       <td>{{$enseignant->Téléphone}}</td>
 
-      <td>{{$enseignant->statut_id}}</td>
+      <td>{{$enseignant->statut->libelle}}</td>
       <td>
              <a href ="{{ route('enseignant.edit', ['enseignant'=>$enseignant->id]) }}" class = "btn btn-info">Editer</a>
               <a href = "#" class= "btn btn-danger" onclick="if(confirm('Voulez-vous vraiment supprimer cet enseignant?')){document.getElementById('form-{{$enseignant->id}}').submit() }">Supprimer</a>
